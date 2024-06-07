@@ -1,0 +1,84 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    color: darkblue;
+    font-size: 60px;
+    margin: 100px auto; /* Ajuste a margem superior para posicionar melhor */
+    padding: 20px; /* Reduzi o padding para evitar excesso de espaço */
+    text-align: center; /* Centraliza o texto */
+}
+
+
+h2 {
+    color: #333;
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 200px;
+    padding: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos da tabela */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+td:last-child {
+    font-weight: bold;
+}
+
+td.aprovado {
+    color: green;
+}
+
+td.reprovado {
+    color: red;
+}

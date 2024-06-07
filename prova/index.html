@@ -1,0 +1,61 @@
+
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.js">
+    <title>Notas dos alunos</title>
+</head>
+<body>
+    <h1><p>NOTAS</p></h1>
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome">
+    <br><br>
+    <label for="matricula">Matrícula:</label><br>
+    <input type="text" id="matricula">
+    <br><br>
+    <label for="nota">Nota:</label><br>
+    <input type="number" id="nota">
+    <br><br><br>
+    <button onclick="verificar()">Verificar</button><br>
+    <br>
+    <table id="resultado">
+        <tr>
+            <th>Nome</th>
+            <th>Matrícula</th>
+            <th>Nota</th>
+            <th>Situação</th>
+        </tr>
+    </table>
+    <script>
+        function verificar() {
+            const nome = document.getElementById("nome").value;
+            const matricula = document.getElementById("matricula").value;
+            const nota = parseFloat(document.getElementById("nota").value);
+            const situacao = nota >= 7 ? "Aprovado" : "Reprovado";
+
+            const tabela = document.getElementById("resultado");
+            const linha = tabela.insertRow();
+            const colunaNome = linha.insertCell(0);
+            const colunaMatricula = linha.insertCell(1);
+            const colunaNota = linha.insertCell(2);
+            const colunaSituacao = linha.insertCell(3);
+
+            colunaNome.innerHTML = nome;
+            colunaMatricula.innerHTML = matricula;
+            colunaNota.innerHTML = nota;
+
+            // Adicionando cores
+            if (situacao === "Aprovado") {
+                colunaSituacao.innerHTML = `<span style="color: green;">${situacao}</span>`;
+            } else {
+                colunaSituacao.innerHTML = `<span style="color: red;">${situacao}</span>`;
+            }
+        }
+    </script>
+
+</body>
+</html>
+    
